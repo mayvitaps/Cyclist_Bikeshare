@@ -1,2 +1,15 @@
-# Cyclist_Bikeshare
-Google Data Analytic Capstone Cyclist Bikeshare
+# Cyclist_Bikeshare_Data_Analytics
+Google Data Analytic Capstone Cyclist Bikeshare (R)
+# Preparation
+trip_sep23 <- read.csv("202309-divvy-tripdata.csv")
+trip_oct23 <- read.csv("202310-divvy-tripdata.csv")
+trip_nov23 <- read.csv("202311-divvy-tripdata.csv")
+trip_dec23 <- read.csv("202312-divvy-tripdata.csv")
+trip_jan23 <- read.csv("202401-divvy-tripdata.csv")
+trip_feb23 <- read.csv("202402-divvy-tripdata.csv")
+trip_mar23 <- read.csv("202403-divvy-tripdata.csv")
+trip_apr23 <- read.csv("202404-divvy-tripdata.csv")
+trip_may23 <- read.csv("202405-divvy-tripdata.csv")
+trip_jun23 <- read.csv("202406-divvy-tripdata.csv")
+trip_jul23 <- read.csv("202407-divvy-tripdata.csv")
+trip_aug23 <- read.csv("202408-divvy-tripdata.csv")
