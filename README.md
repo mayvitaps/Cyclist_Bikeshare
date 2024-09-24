@@ -29,25 +29,13 @@ Then we load the data from the database given. In this case, i would like to use
 >> trip_jul23 <- read.csv("202407-divvy-tripdata.csv")
 >> trip_aug23 <- read.csv("202408-divvy-tripdata.csv")
 
-# Installing the packages and open the libraries
-
-install.packages("tidyverse")
-install.packages("dplyr")
-install.packages("lubridate")
-install.packages("hms")
-
-library(tidyverse)
-library(dplyr)
-library(lubridate)
-library(hms)
-
-colnames(df_original)
-str(df_original)
+>> colnames(df_original)
+>> str(df_original)
 
 # Print total rows on "df_original" table
 
-num_rows <- nrow(df_original)
-print(num_rows)
+>> num_rows <- nrow(df_original)
+>> print(num_rows)
 
 ---------------------------------------
 | NO |     Attribute      | Date Type |
@@ -69,10 +57,10 @@ print(num_rows)
 
 # Change data type from "chr" to "POSIXct"
 
-df_original$started_at <- as.POSIXct(df_original$started_at)
-df_original$ended_at <- as.POSIXct(df_original$ended_at)
-class(df_original$started_at) 
-class(df_original$ended_at)
+>> df_original$started_at <- as.POSIXct(df_original$started_at)
+>> df_original$ended_at <- as.POSIXct(df_original$ended_at)
+>> class(df_original$started_at) 
+>> class(df_original$ended_at)
 
 # Calculate ride length and store it into new column "ride_length".
 
