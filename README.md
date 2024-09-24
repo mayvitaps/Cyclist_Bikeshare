@@ -1,9 +1,9 @@
 # Cyclistic Bikeshare
 Google Data Analytic Capstone Cyclist Bikeshare (R)
 
-# Preparation
+## Preparation Phase
 
-First thing first, we need to install the packages and open the library before we load the data.
+### First thing first, we need to install the packages and open the library before we load the data.
 
 >> install.packages("tidyverse")
 >> install.packages("dplyr")
@@ -15,7 +15,7 @@ First thing first, we need to install the packages and open the library before w
 >> library(lubridate)
 >> library(hms)
 
-Then we load the data from the database given. In this case, i would like to use the latest 12 months data from September 2023 to August 2024.
+### Then we load the data from the database given. In this case, i would like to use the latest 12 months data from September 2023 to August 2024.
 >> trip_sep23 <- read.csv("202309-divvy-tripdata.csv")
 >> trip_oct23 <- read.csv("202310-divvy-tripdata.csv")
 >> trip_nov23 <- read.csv("202311-divvy-tripdata.csv")
@@ -32,7 +32,7 @@ Then we load the data from the database given. In this case, i would like to use
 >> colnames(df_original)
 >> str(df_original)
 
-# Print total rows on "df_original" table
+### Print total rows on "df_original" table
 
 >> num_rows <- nrow(df_original)
 >> print(num_rows)
@@ -55,42 +55,42 @@ Then we load the data from the database given. In this case, i would like to use
 |13. |member_casual       | chr       |
 ---------------------------------------
 
-# Change data type from "chr" to "POSIXct"
+### Change data type from "chr" to "POSIXct"
 
 >> df_original$started_at <- as.POSIXct(df_original$started_at)
 >> df_original$ended_at <- as.POSIXct(df_original$ended_at)
 >> class(df_original$started_at) 
 >> class(df_original$ended_at)
 
-# Calculate ride length and store it into new column "ride_length".
+### Calculate ride length and store it into new column "ride_length".
 
 df_original$ride_length <- difftime(df_original$ended_at, 
 df_original$started_at, units = "mins")
 class(df_original$ride_length)
 
-# Change "ride_length" data type from "difftime"  to "num"
+### Change "ride_length" data type from "difftime"  to "num"
 
 df_original$ride_length <- as.numeric(as.character(df_original$ride_length))
 is.numeric(df_original$ride_length)
 
-# create column "day_of_week"
+### create column "day_of_week"
 
 df_original$day_of_week <- wday(df_original$started_at)
 
 #save "df_original.csv" table
 write.csv(df_original, file = "df_original.csv", row.names = FALSE)
 
-# Duplicate the original table to "df_updated" table
+### Duplicate the original table to "df_updated" table
 df_updated <- df_original
 View(df_updated)
 
-# remove duplicate rows
+### remove duplicate rows
 df_updated <- distinct(df_updated)
 
-# remove rows with null values
+### remove rows with null values
 df <- na.omit(df_original)
 
-# remove rows where ride_length is <= zero
+### remove rows where ride_length is <= zero
 df_updated <- df_updated[!(df_updated$ride_length<=0),]
 
 # rename member_casual to membership
