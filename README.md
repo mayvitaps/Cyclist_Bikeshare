@@ -16,18 +16,18 @@ First thing first, we need to install the packages and open the library before w
 >> library(hms)
 
 Then we load the data from the database given. In this case, i would like to use the latest 12 months data from September 2023 to August 2024.
-> trip_sep23 <- read.csv("202309-divvy-tripdata.csv")
-> trip_oct23 <- read.csv("202310-divvy-tripdata.csv")
-> trip_nov23 <- read.csv("202311-divvy-tripdata.csv")
-> trip_dec23 <- read.csv("202312-divvy-tripdata.csv")
-> trip_jan23 <- read.csv("202401-divvy-tripdata.csv")
-> trip_feb23 <- read.csv("202402-divvy-tripdata.csv")
-> trip_mar23 <- read.csv("202403-divvy-tripdata.csv")
-> trip_apr23 <- read.csv("202404-divvy-tripdata.csv")
-> trip_may23 <- read.csv("202405-divvy-tripdata.csv")
-> trip_jun23 <- read.csv("202406-divvy-tripdata.csv")
-> trip_jul23 <- read.csv("202407-divvy-tripdata.csv")
-> trip_aug23 <- read.csv("202408-divvy-tripdata.csv")
+>> trip_sep23 <- read.csv("202309-divvy-tripdata.csv")
+>> trip_oct23 <- read.csv("202310-divvy-tripdata.csv")
+>> trip_nov23 <- read.csv("202311-divvy-tripdata.csv")
+>> trip_dec23 <- read.csv("202312-divvy-tripdata.csv")
+>> trip_jan23 <- read.csv("202401-divvy-tripdata.csv")
+>> trip_feb23 <- read.csv("202402-divvy-tripdata.csv")
+>> trip_mar23 <- read.csv("202403-divvy-tripdata.csv")
+>> trip_apr23 <- read.csv("202404-divvy-tripdata.csv")
+>> trip_may23 <- read.csv("202405-divvy-tripdata.csv")
+>> trip_jun23 <- read.csv("202406-divvy-tripdata.csv")
+>> trip_jul23 <- read.csv("202407-divvy-tripdata.csv")
+>> trip_aug23 <- read.csv("202408-divvy-tripdata.csv")
 
 # Installing the packages and open the libraries
 
